@@ -21,7 +21,7 @@ HTML5 sémantique · JavaScript  — aucune dépendance, aucun framework.
 
 1. Cloner le dépôt
    ```bash
-   git clone https://github.com/<ton-compte>/cinematch.git
+   git clone https://github.com/bjaphet/CineMatch.git
    ```
 2. Récupérer une clé API gratuite sur [themoviedb.org/settings/api](https://www.themoviedb.org/settings/api)
 3. Ouvrir `index.html` dans le navigateur
