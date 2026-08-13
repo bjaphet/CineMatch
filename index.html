@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue de Films - TMDB</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome pour l'icône de cœur et de recherche -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- En-tête avec barre de recherche et navigation -->
+  <header>
+    <div class="header-container">
+      <h1><i class="fa-solid fa-film"></i> CineApp</h1>
+      
+      <!-- Barre de Recherche (Niveau 2) -->
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Rechercher un film..." autocomplete="off">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+
+      <!-- Navigation Onglets -->
+      <nav class="nav-buttons">
+        <button id="btn-popular" class="active-tab">Populaires</button>
+        <button id="btn-favorites"><i class="fa-solid fa-heart"></i> Favoris (<span id="fav-count">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Indicateurs d'état (Niveau 1) -->
+    <div id="loader" class="loader hidden"></div>
+    <div id="error-message" class="error-message hidden"></div>
+
+    <!-- Titre de la section -->
+    <h2 id="section-title">Films Populaires</h2>
+
+    <!-- Grille de films (Niveau 1) -->
+    <div id="movies-container" class="movies-grid"></div>
+  </main>
+
+  <!-- Modale de détails (Niveau 3) -->
+  <div id="movie-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close-btn">&times;</span>
+      <div class="modal-body">
+        <img id="modal-poster" src="" alt="Affiche du film">
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <p class="modal-meta">
+            <span id="modal-date"></span> | 
+            <span id="modal-rating" class="badge"></span>
+          </p>
+          <div id="modal-genres" class="genres-container"></div>
+          <h3>Synopsis</h3>
+          <p id="modal-overview"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
